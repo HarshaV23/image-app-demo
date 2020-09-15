@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>image-app-1</artifactId>
+    <artifactId>image-app</artifactId>
     <version>version-1</version>
     <name>image-app</name>
     <description>Demo project for Spring Boot</description>
@@ -69,28 +69,26 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-           <!-- <plugin>
+            <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.10</version>
                 <executions>
                     <execution>
                         <id>default</id>
                         <goals>
                             <goal>build</goal>
-                            <goal>push</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>harshav23/${project.artifactId}</repository>
+                    <repository>harshav23/${project.name}</repository>
                     <tag>${project.version}</tag>
-                    <buildArgs>
-                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>
+                    <skipDockerInfo>true</skipDockerInfo>
                 </configuration>
             </plugin>
- -->        </plugins>
-        <finalName>image-app-1</finalName>
+        </plugins>
+        <finalName>image-app</finalName>
     </build>
 
 </project>

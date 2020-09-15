@@ -22,6 +22,9 @@ public class ImageAppApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         imageRepo.save(new Image(generateId(),"Avengers","Coming Soon",true));
         imageRepo.save(new Image(generateId(),"Avengers Age Of Ultron","Coming Soon",true));
+        imageRepo.save(new Image(generateId(),"Avengers Age Of 2","Coming Soon",true));
+        imageRepo.save(new Image(generateId(),"Avengers Age Of Ultron","Coming Soon",true));
+
     }
 
     private String generateId(){
